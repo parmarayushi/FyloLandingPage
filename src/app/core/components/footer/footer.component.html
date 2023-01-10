@@ -1,0 +1,82 @@
+<footer>
+    <div class="bg-secondary p-5">
+        <div class="d-flex flex-column flex-md-row m-0 m-md-5 my-5 my-md-0">
+            <div class="col-12 col-md-6 text-center text-md-start">
+                <h3 class="header-text text-white fw-bold pb-3">Get early access today</h3>
+                <p class="text-white footer-text">It only takes a minute to sign up and or free starter tier is
+                    extremely
+                    generous. If you have any questions our support team would be happy to have you.</p>
+            </div>
+            <form
+                class="col-12 col-md-6 d-flex flex-column align-items-center align-items-md-start ps-0 ps-md-5 ms-0 ms-md-5"
+                [formGroup]="form">
+                <input type="text" class="form-control text-muted shadow rounded-1 w-75 p-3"
+                    placeholder="email@example.com" formControlName="email">
+                <div *ngIf="getControls['email'].touched && getControls['email'].errors || formSubmitted">
+                    <small *ngIf="getControls['email'].errors && getControls['email'].errors['required']"
+                        class="text-danger">
+                        email is required.
+                    </small>
+                    <small *ngIf="getControls['email'].errors?.['pattern']" class="text-white">
+                        Please check your email
+                    </small>
+                </div>
+                <button class="btn btn-primary button-footer shadow rounded-1 mt-3 p-3 px-4">Get Started For
+                    Free</button>
+            </form>
+        </div>
+    </div>
+    <div class="bg-success text-white p-5">
+        <div class="m-0 m-md-5 my-5 my-md-0">
+            <div class="pb-5">
+                <img src="assets/images/logo.svg" alt="logo" class="img-fluid">
+            </div>
+            <div class="d-md-flex justify-content-between">
+                <div class="pb-5 pb-md-0">
+                    <div class="d-flex align-items-center pb-3">
+                        <img src="assets/images/icon-phone.svg" alt="phone" class="pe-3">
+                        <p class="mb-0">Phone: +1-542-123-4586</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <img src="assets/images/icon-email.svg" alt="email" class="pe-3">
+                        <p class="mb-0">example@gmail.com</p>
+                    </div>
+                </div>
+                <div class="pb-5 pb-md-0">
+                    <ul class="ps-0 mb-0">
+                        <li class="nav-item">
+                            <a class="nav-link pb-3">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pb-3">Jobs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pb-3">Press</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">Blogs</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pb-5 pb-md-0">
+                    <ul class="ps-0 mb-0">
+                        <li class="nav-item">
+                            <a class="nav-link pb-3">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pb-3">Terms</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="cursor-pointer d-flex d-md-block justify-content-center justify-content-md-start">
+                    <span class="icon icon-facebook rounded-circle p-2 me-3"></span>
+                    <span class="icon icon-twitter rounded-circle p-2 me-3"></span>
+                    <span class="icon icon-instagram rounded-circle p-2"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
